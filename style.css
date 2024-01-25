@@ -1,20 +1,10 @@
-body {
-    color: hotpink;
-}
 div {
-    background-color: lightgray;
+    background-color: rgb(255, 255, 255);
 }
 #heading {
-    background-color: lightgray;
+    background-color: rgb(255, 255, 255);
 }
 #fancy-subtext {
-    /* text looks cursive */
-    font: italic 1em "Times New Roman", Times, serif;
-    color: burlywood;
-    text-shadow: 1px 1px 5px #000000, 1px 1px 2px #000000;
-}
-#fancy-subtext:hover {
-    /* text looks cursive */
     font: italic 1em "Times New Roman", Times, serif;
     color: burlywood;
     text-shadow: 1px 1px 5px #000000, 1px 1px 2px #000000;
@@ -27,25 +17,54 @@ div {
 .grid-container {
     display: grid;
     justify-content: center;
-    background-color: lightgray;
 }
 #top-box {
-    background-color: lightgray;
     padding-top: 25px;
     padding-bottom: 25px;
     border-bottom: 5px solid #777777;
 }
 #item-order-box {
-    background-color: lightgray;
     padding-top: 50px;
     padding-bottom: 50px;
 }
-img {
-    object-fit: cover;
+.Item-Listing-Img {
+    object-fit: scale-down;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    border-radius: 24px;
+    max-width: 60%;
+    height: auto;
+    padding: 16px;
+}
+.col.Item-Listing-Text {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    padding-left: 25px;
 }
 #bottom-box {
-    background-color: lightgray;
     padding-top: 25px;
     padding-bottom: 25px;
     border-top: 5px solid #777777;
+}
+.btn.btn-outline-dark.add-button {
+    background-color: lightgray;
+    border-color: #777777;
+    color: #000000;
+    float: right;
+}
+.item-name {
+    font: bold 1.5em "Times New Roman", Times, serif;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 5px #000000, 1px 1px 2px #000000;
+}
+.item-description {
+    font: 1em "Times New Roman", Times, serif;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 5px #000000, 1px 1px 2px #000000;
+}
+.item-price {
+    font: 1.5em "Times New Roman", Times, serif;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 5px #000000, 1px 1px 2px #000000;
+    display: inline-block;
 }
