@@ -1,7 +1,7 @@
 import './App.css';
 import MenuItem from './components/MenuItem';
 
-// import 'bootstrap/dist/css/bootstrap.min.css'; // This imports bootstrap css styles. You can use bootstrap or your own classes by using the className attribute in your elements.
+import 'bootstrap/dist/css/bootstrap.min.css'; // This imports bootstrap css styles. You can use bootstrap or your own classes by using the className attribute in your elements.
 
 // Menu data. An array of objects where each object represents a menu item. Each menu item has an id, title, description, image name, and price.
 // You can use the image name to get the image from the images folder.
@@ -82,10 +82,21 @@ const menuItems = [
 function App() {
   return (
     <div>
-      <h1>Menu</h1>
+      <h1> Japanese Restaurant </h1>
+      <div class="row">
+        <div class="row flavor-txt-1">
+          <h3> The Best Japanese Food This Side of the Colorado River</h3>
+        </div>
+        <div class="row flavor-txt-2">
+          <h3> Our Menu</h3>
+        </div>
+      </div>
       <div className="menu">
-        {/* Display menu items dynamicaly here by iterating over the provided menuItems */}
-        <MenuItem title={menuItems[0].title} /> {/* Example for how to use a component */}
+        {/* Display menu items dynamicaly here by iterating over the provided menuItems */
+        menuItems.map((item) => (
+          <MenuItem title={item.title} description={item.description} price={item.price} />
+        ))
+}
       </div>
     </div>
   );

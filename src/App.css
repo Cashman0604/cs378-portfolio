@@ -3,6 +3,26 @@
   Below, you can see an example of a class called "menu" that changes the color of the text to blue. Modify according to your needs.
 */
 
-.menu {
-  color: blue;
+.menu{
+  color: rgb(66, 66, 66);
+}
+.card-img-top {
+  padding: 25px;
+  width: 100%;
+  border-radius: 16%;
+}
+h1 {
+  font-weight: bold;
+  text-align: center;
+}
+.row.flavor-txt-1 h3 {
+  padding: 20px;
+  text-align: center;
+  font-style: italic;
+  color:rgb(68, 102, 133);
+}
+.row.flavor-txt-2 h3 {
+  text-align: center;
+  font-size: 3em;
+  color:rgb(99, 99, 99);
 }
