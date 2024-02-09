@@ -94,7 +94,7 @@ function App() {
       <div className="menu">
         {/* Display menu items dynamicaly here by iterating over the provided menuItems */
         menuItems.map((item) => (
-          <MenuItem title={item.title} description={item.description} price={item.price} />
+          <MenuItem title={item.title} description={item.description} price={item.price} imageName={item.imageName} />
         ))
 }
       </div>

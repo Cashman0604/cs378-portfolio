@@ -24,6 +24,9 @@
   border-collapse: separate;
   overflow: hidden;
   perspective: 1px;
+  object-fit: cover;
+  border-top-right-radius: 16% !important;
+  border-top-left-radius: 16% !important;
 }
 .card-img-top:hover {
   transform: scale(1.1);

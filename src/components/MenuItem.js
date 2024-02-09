@@ -7,11 +7,11 @@ import React from 'react';
 // Hint: You can use the image name to get the image from the images folder.
 // import bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
-const MenuItem = ({ title, description, price }) => {
+const MenuItem = ({ title, description, price, imageName }) => {
     return (
         <div className='row item'>
             <div className='col-4'>
-                <img src={'images/' + title + '.png'} className='card-img-top' alt={title} />
+                <img src={'images/' + imageName} className='card-img-top' alt={title} />
             </div>
             <div className='col-1'></div>
             <div className='col-7'>
