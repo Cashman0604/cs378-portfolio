@@ -9,20 +9,25 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 const MenuItem = ({ title, description, price }) => {
     return (
-        <div class='row'>
-            <div class='col-4'>
-                <img src={'images/' + title + '.png'} class='card-img-top' alt='...' />
+        <div className='row item'>
+            <div className='col-4'>
+                <img src={'images/' + title + '.png'} className='card-img-top' alt={title} />
             </div>
-            <div class='col-1'></div>
-            <div class='col-7'>
-                <div class='row'>
+            <div className='col-1'></div>
+            <div className='col-7'>
+                <div className='row'>
                     <h2>{title}</h2>
                 </div>
-                <div class='row'>
+                <div className='row'>
                     <p>{description}</p>
                 </div>
-                <div class='row'>
-                    <p>{'$' + price}</p>
+                <div className='row'>
+                    <div className='col-8'>
+                        <p>{'$' + price}</p>
+                    </div>
+                    <div className='col-4'>
+                        <button type='button' className='btn btn-primary'>Add</button>
+                    </div>
                 </div>
             </div>
         </div>

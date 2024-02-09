@@ -82,12 +82,12 @@ const menuItems = [
 function App() {
   return (
     <div>
-      <h1> Japanese Restaurant </h1>
-      <div class="row">
-        <div class="row flavor-txt-1">
+      <img className="logo" src="images/shoplogo.png" alt="logo" />
+      <div className="row">
+        <div className="row flavor-txt-1">
           <h3> The Best Japanese Food This Side of the Colorado River</h3>
         </div>
-        <div class="row flavor-txt-2">
+        <div className="row flavor-txt-2">
           <h3> Our Menu</h3>
         </div>
       </div>
