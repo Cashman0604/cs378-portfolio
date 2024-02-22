@@ -7,7 +7,33 @@ import React from 'react';
 // Hint: You can use the image name to get the image from the images folder.
 // import bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
-const MenuItem = ({ title, description, price, imageName }) => {
+const MenuItem = ({ id, title, description, price, imageName, order, setOrder }) => {
+    
+    const handleMinusClick = () => {
+        if (Array.isArray(order) && order[id - 1] > 0) {
+            // copy the order array and subtract 1 from the element at id - 1
+            var newOrder = order.slice();
+            newOrder[id - 1] -= 1;
+            setOrder(newOrder);
+        }
+    };
+
+    const handlePlusClick = () => {
+        if (Array.isArray(order)) {
+            // copy the order array and add 1 to the element at id - 1
+            var newOrder = order.slice();
+            newOrder[id - 1] += 1;
+            setOrder(newOrder);
+        }
+    };
+
+    const getOrder = () => {
+        if (Array.isArray(order)) {
+            return order[id - 1];
+        }
+        return 0;
+    }
+
     return (
         <div className='row item'>
             <div className='col-4'>
@@ -26,7 +52,10 @@ const MenuItem = ({ title, description, price, imageName }) => {
                         <p>{'$' + price}</p>
                     </div>
                     <div className='col-4'>
-                        <button type='button' className='btn btn-primary'>Add</button>
+                        {/* have a - and a + button with the current total in the middle of them.Add or remove element in order at id - 1 */}
+                        <button onClick={handleMinusClick} className='btn btn-secondary'>-</button>
+                        <span>{getOrder()}</span>
+                        <button onClick={handlePlusClick} className='btn btn-secondary'>+</button>
                     </div>
                 </div>
             </div>
